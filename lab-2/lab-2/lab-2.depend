@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1636666668 source:c:\users\ammar el-saeed\desktop\embedded labs\lab-2\lab-2\main.c
+	<stdio.h>
+	<stdlib.h>
+
