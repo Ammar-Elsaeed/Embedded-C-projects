@@ -15,23 +15,24 @@ int main()
     printf("\n");
     }
 
-     unsigned int number,numrotations;
+     unsigned char number;
+     int numrotations;
      int direction;
     printf("the number: ");
-    scanf("%u", &number);
+    scanf("%d", &number);
     printf("number of rotations: ");
-    scanf("%u", &numrotations);
+    scanf("%d", &numrotations);
     printf("rotation direction: ");
-    scanf("%u", &direction);
+    scanf("%d", &direction);
     //unsigned char number2 = (unsigned char)number;
-    int newnum=0;
+    unsigned char newnum=0;
     if(direction==0){
-       newnum = (number>>numrotations) | (number<<(32-numrotations));
+       newnum = (number>>numrotations) | (number<<(8-numrotations));
     }
     if(direction==1){
-       newnum = (number<<numrotations) | (number>>(32-numrotations));
+       newnum = (number<<numrotations) | (number>>(8-numrotations));
     }
-    printf("%u",newnum);
+    printf("%d",newnum);
     printf("\n");
 
 

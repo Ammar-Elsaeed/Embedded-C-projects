@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1637171385 source:c:\users\ammar el-saeed\desktop\embedded labs\embedded-c-projects\task1\task-1\main.c
+	<stdio.h>
+	<stdlib.h>
+
