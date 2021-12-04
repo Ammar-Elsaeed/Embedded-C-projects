@@ -55,7 +55,7 @@ int main(void) {
 	else{
 		GPIOB_ODR |=(1<<7);}
 
-	while(checkbit3==0){//falling edge detection, this won't exit until we unpress the button. which brings logic level to 1.
+	while(checkbit3==0){//rising edge detection, this won't exit until we unpress the button. which brings logic level to 1.
 		checkbit3 = button_state;
 	}
   }

@@ -19,7 +19,7 @@ int main()
      int numrotations;
      int direction;
     printf("the number: ");
-    scanf("%d", &number);
+    scanf("%c", &number);
     printf("number of rotations: ");
     scanf("%d", &numrotations);
     printf("rotation direction: ");

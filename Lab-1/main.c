@@ -25,7 +25,7 @@ int main()
     scanf("%f", &a);
     float v = u + a*t ;
     float s = u*t + 0.5 * a * t*t;
-    printf("the velocity and distance respectively are: %f %f", v,s );
+    printf("the velocity and distance respectively are: %f %f\n", v,s );
 
 
 //task-2:
@@ -46,11 +46,11 @@ int main()
     min = min<num3 ? min:num3;
     float max = num1>num2 ? num1:num2;
     max = max>num3 ? max:num3;
-    printf("%f",sum);
-    printf("%f",product);
-    printf("%f",average);
-    printf("%f",min);
-    printf("%f",max);
+    printf("sum: %f\n",sum);
+    printf("product: %f\n",product);
+    printf("average: %f\n",average);
+    printf("min: %f\n",min);
+    printf("max: %f\n",max);
 
 //task3:
     int secondsinput;
