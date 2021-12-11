@@ -28,6 +28,6 @@
 
 void GPIO_Init( char Port, unsigned int PIN_NO, unsigned int PIN_Dir, unsigned int Default_State);
 unsigned char GPIO_WritePin(char Port, unsigned int PIN_NO, unsigned int Data);
-
+unsigned char GPIO_ReadPin(char Port, unsigned int PIN_NO);
 
 #endif /* INC_GPIO_H_ */

@@ -1,5 +1,8 @@
 #include "stm32f401cc_interface.h"
-#define button_state (GPIO_ReadPin("B",3))
+#include "GPIO.h"
+#include "stm32f401xc.h"
+#define button_state (GPIO_ReadPin('B',3))
+
 
 int main(void) {
 
@@ -23,12 +26,13 @@ int main(void) {
 	GPIO_Init('B', 6 , OUTPUT, PUSH_PULL);
 	GPIO_Init('B', 7 , OUTPUT, PUSH_PULL);
     GPIO_Init('B', 3 , INPUT, PULLUP);
+
   short int checkbit3=button_state;
   unsigned char color =0;
   unsigned char colorbit0=0;
   unsigned char colorbit1=0;
   unsigned char colorbit2=0;
-  unsigned char stillpressed=0;
+
 //  GPIOB_ODR = 1<<5;
 
   while(1){

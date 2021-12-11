@@ -1,0 +1,4 @@
+Keypad.c:10:6:keypad_init	16	static
+Keypad.c:24:6:keypad_manage	24	static
+Keypad.c:49:6:keypad_getkey	4	static
+Keypad.c:52:6:keypadCallouts_KeyPressNotification	24	static
