@@ -11,7 +11,6 @@ int main(void) {
 
   while (1) {
 	  	  keypad_manage();
-
   }
 
   return 0;
