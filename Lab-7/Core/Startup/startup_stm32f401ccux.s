@@ -149,7 +149,7 @@ g_pfnVectors:
   .word     RTC_WKUP_IRQHandler               /* RTC Wakeup through the EXTI line */                      
   .word     FLASH_IRQHandler                  /* FLASH                        */                                          
   .word     RCC_IRQHandler                    /* RCC                          */                                            
-  .word     EXTI0_IRQHandler                  /* EXTI Line0                   */                        
+  .word     toggle_led                  /* EXTI Line0                   */
   .word     EXTI1_IRQHandler                  /* EXTI Line1                   */                          
   .word     EXTI2_IRQHandler                  /* EXTI Line2                   */                          
   .word     EXTI3_IRQHandler                  /* EXTI Line3                   */                          

@@ -1,0 +1,40 @@
+C51 COMPILER V8.08   SEVEN_SEG                                                             05/22/2021 19:32:48 PAGE 1   
+
+
+C51 COMPILER V8.08, COMPILATION OF MODULE SEVEN_SEG
+OBJECT MODULE PLACED IN seven_seg.OBJ
+COMPILER INVOKED BY: C:\SiLabs\MCU\IDEfiles\C51\BIN\C51.exe seven_seg.c DB OE BR
+
+line level    source
+
+   1          #include "Main.h"
+   2          #include "Port.h"
+   3          #include "seven_seg.h"
+   4          
+   5          unsigned char numbers[5]={ 0x3f,0x06,0x5b,0x4f,0x66};
+   6          
+   7          void sevenSegment_init(unsigned char portNumber)
+   8          { 
+   9   1          // initializing port 1 (7 segment) output
+  10   1          GPIO_InitPort(portNumber, 1); 
+  11   1      }
+  12          
+  13          void sevenSegment_write(unsigned char floorIndex)
+  14          {
+  15   1          GPIO_WritePort(sevenSeg_PORT_DR, numbers[floorIndex]);
+  16   1          
+  17   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      9    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      5    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

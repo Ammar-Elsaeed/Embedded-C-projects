@@ -1,0 +1,96 @@
+C51 COMPILER V8.08   BUTTONS                                                               05/22/2021 19:32:48 PAGE 1   
+
+
+C51 COMPILER V8.08, COMPILATION OF MODULE BUTTONS
+OBJECT MODULE PLACED IN buttons.OBJ
+COMPILER INVOKED BY: C:\SiLabs\MCU\IDEfiles\C51\BIN\C51.exe buttons.c DB OE BR
+
+line level    source
+
+   1          #include "Main.h"
+   2          #include "Port.h"
+   3          #include "buttons.h"
+   4          
+   5          // void Button_Init(tBUTTON BUTTON)
+   6          // {
+   7          //     /* Add your code here! */
+   8          //     /* Configure led pins as output */
+   9          //     switch (BUTTON)
+  10          //     {
+  11          //         case BUTTON_4DOWN:
+  12          //             GPIO_InitPortPin(BUTTON_4DOWN_PORT_CR, BUTTON_4DOWN_PIN, GPIO_IN);
+  13          //             break;
+  14          //         case BUTTON_3UP:
+  15          //             GPIO_InitPortPin(BUTTON_3UP_PORT_CR, BUTTON_3UP_PIN, GPIO_IN);
+  16          //             break;
+  17          //         case BUTTON_3DOWN:
+  18          //             GPIO_InitPortPin(BUTTON_3DOWN_PORT_CR, BUTTON_3DOWN_PIN, GPIO_IN);
+  19          //             break;
+  20          //         case BUTTON_2UP:
+  21          //             GPIO_InitPortPin(BUTTON_2UP_PORT_CR, BUTTON_2UP_PIN, GPIO_IN);
+  22          //             break;
+  23          //         case BUTTON_2DOWN:
+  24          //             GPIO_InitPortPin(BUTTON_2DOWN_PORT_CR, BUTTON_2DOWN_PIN, GPIO_IN);
+  25          //             break;
+  26          //         case BUTTON_1UP:
+  27          //             GPIO_InitPortPin(BUTTON_1UP_PORT_CR, BUTTON_1UP_PIN, GPIO_IN);
+  28          //             break;
+  29          //         case BUTTON_1DOWN:
+  30          //             GPIO_InitPortPin(BUTTON_1DOWN_PORT_CR, BUTTON_1DOWN_PIN, GPIO_IN);
+  31          //             break;
+  32          //         case BUTTON_GUP:
+  33          //             GPIO_InitPortPin(BUTTON_GUP_PORT_CR, BUTTON_GUP_PIN, GPIO_IN);
+  34          //                      break;
+  35          
+  36          //         case BUTTON_OPEN:
+  37          //             GPIO_InitPortPin(OPEN_PORT_CR, OPEN_PIN, GPIO_IN);
+  38          //             break;
+  39          
+  40          //         case BUTTON_4:
+  41          //             GPIO_InitPortPin(BUTTON_4_PORT_CR, BUTTON_4_PIN, GPIO_IN);
+  42          //             break;
+  43          //         case BUTTON_3:
+  44          //             GPIO_InitPortPin(BUTTON_3_PORT_CR, BUTTON_3_PIN, GPIO_IN);
+  45          //             break;
+  46          //         case BUTTON_2:
+  47          //             GPIO_InitPortPin(BUTTON_2_PORT_CR, BUTTON_2_PIN, GPIO_IN);
+  48          //             break;
+  49          //         case BUTTON_1:
+  50          //             GPIO_InitPortPin(BUTTON_1_PORT_CR, BUTTON_1_PIN, GPIO_IN);
+  51          //             break;
+  52          //         case BUTTON_G:
+  53          //             GPIO_InitPortPin(BUTTON_G_PORT_CR, BUTTON_G_PIN, GPIO_IN);
+  54          //             break;
+  55          //         default:
+C51 COMPILER V8.08   BUTTONS                                                               05/22/2021 19:32:48 PAGE 2   
+
+  56          //             /* Should not come here */
+  57          //             break;
+  58          //     }
+  59          //      }
+  60          
+  61          void button_init(unsigned char portNumber, unsigned char pinNumber)
+  62          {
+  63   1          GPIO_InitPortPin(portNumber, pinNumber, 0);
+  64   1      }
+  65          
+  66          unsigned char button_read(unsigned char portNumber, unsigned char pinNumber)
+  67          {
+  68   1          unsigned char x;
+  69   1          x = GPIO_ReadPortPin(portNumber, pinNumber);
+  70   1          return x;
+  71   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     65    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

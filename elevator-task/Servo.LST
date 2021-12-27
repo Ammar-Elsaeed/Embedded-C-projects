@@ -1,0 +1,31 @@
+C51 COMPILER V8.08   SERVO                                                                 05/22/2021 19:32:49 PAGE 1   
+
+
+C51 COMPILER V8.08, COMPILATION OF MODULE SERVO
+OBJECT MODULE PLACED IN Servo.OBJ
+COMPILER INVOKED BY: C:\SiLabs\MCU\IDEfiles\C51\BIN\C51.exe Servo.c DB OE BR
+
+line level    source
+
+   1          #include "Main.h"
+   2          #include "Port.h"
+   3          #include "Servo.h"
+   4          
+   5          void SERVO_Init()
+   6          {
+   7   1          GPIO_InitPortPin(SERVO_PORT_CR, SERVO_PIN, GPIO_OUT);
+   8   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      9    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,5 @@
+"H:\MC_task2\app.obj",
+"H:\MC_task2\buttons.obj",
+"H:\MC_task2\Led.obj",
+"H:\MC_task2\seven_seg.obj",
+"H:\MC_task2\Servo.obj"  TO "H:\MC_task2\app" RS(256) PL(68) PW(78) 

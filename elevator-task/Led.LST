@@ -1,0 +1,110 @@
+C51 COMPILER V8.08   LED                                                                   05/22/2021 19:32:48 PAGE 1   
+
+
+C51 COMPILER V8.08, COMPILATION OF MODULE LED
+OBJECT MODULE PLACED IN Led.OBJ
+COMPILER INVOKED BY: C:\SiLabs\MCU\IDEfiles\C51\BIN\C51.exe Led.c DB OE BR
+
+line level    source
+
+   1          #include "Main.h"
+   2          #include "Port.h"
+   3          #include "Led.h"
+   4          
+   5          
+   6          void LED_Init(tLED led, tLED_State state)
+   7          {
+   8   1          /* Add your code here! */
+   9   1          /* Configure led pins as output */
+  10   1          switch (led)
+  11   1          {
+  12   2              case LED_1:
+  13   2                  GPIO_InitPortPin(LED_1_PORT_CR, LED_1_PIN, GPIO_OUT);
+  14   2                  break;
+  15   2              case LED_2:
+  16   2                 GPIO_InitPortPin(LED_2_PORT_CR, LED_2_PIN, GPIO_OUT);
+  17   2                  break;
+  18   2              default:
+  19   2                  /* Should not come here */
+  20   2                  break;
+  21   2          }
+  22   1          /* Set led state */
+  23   1          LED_SetState(led, state);
+  24   1          /* End of your code */
+  25   1      
+  26   1      }
+  27          
+  28          void LED_Toggle(tLED led)
+  29          {
+  30   1          /* Add your code here! */
+  31   1          /* Toggle led */
+  32   1          if (LED_GetState(led) == LED_ON)
+  33   1          {
+  34   2              LED_SetState(led, LED_OFF);
+  35   2          } else
+  36   1          {
+  37   2              LED_SetState(led, LED_ON);
+  38   2          }
+  39   1      
+  40   1          /* Delay to show toggling effect */
+  41   1          // Delay_MS(LED_DELAY_MS);
+  42   1          /* End of your code */
+  43   1      }
+  44          
+  45          
+  46          void LED_SetState(tLED led, tLED_State state)
+  47          {
+  48   1          /* Add your code here! */
+  49   1          /* Set led state */
+  50   1          switch (led)
+  51   1          {
+  52   2              case LED_1:
+  53   2                  GPIO_WritePortPin(LED_1_PORT_DR, LED_1_PIN, state);
+  54   2                  break;
+  55   2              case LED_2:
+C51 COMPILER V8.08   LED                                                                   05/22/2021 19:32:48 PAGE 2   
+
+  56   2                  GPIO_WritePortPin(LED_2_PORT_DR, LED_2_PIN, state);
+  57   2                  break;
+  58   2              default:
+  59   2                  /* Should not come here */
+  60   2                  break;
+  61   2          }
+  62   1          /* End of your code */
+  63   1      }
+  64          
+  65          tLED_State LED_GetState(tLED led)
+  66          {
+  67   1          tLED_State ret = LED_OFF;
+  68   1      
+  69   1          /* Add your code here! */
+  70   1          /* Set led state */
+  71   1          switch (led)
+  72   1          {
+  73   2              case LED_1:
+  74   2                  ret = GPIO_ReadPortPin(LED_1_PORT_DR, LED_1_PIN);
+  75   2                  break;
+  76   2              case LED_2:
+  77   2                  ret = GPIO_ReadPortPin(LED_2_PORT_DR, LED_2_PIN);
+  78   2                  break;
+  79   2              default:
+  80   2                  /* Should not come here */
+  81   2                  break;
+  82   2          }
+  83   1          /* End of your code */
+  84   1          return ret;
+  85   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    119    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,4 +1,5 @@
-Core/Src/main.o: ../Core/Src/main.c \
+GPIO/GPIO.o: \
+ C:/Users/Ammar\ El-Saeed/Desktop/embedded\ labs/Embedded-C-projects/GPIO/GPIO.c \
  C:/Users/Ammar\ El-Saeed/Desktop/embedded\ labs/Embedded-C-projects/GPIO/Inc/GPIO.h \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xc.h \
  ../Drivers/CMSIS/Include/core_cm4.h \
