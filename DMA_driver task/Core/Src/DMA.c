@@ -46,8 +46,8 @@ void DMA_setparams(unsigned int PID,unsigned int trig,unsigned int * src_arr,uns
 
 void DMA_start_transfer(unsigned int PID){
 	//clear interrupts
-//	*registers[PID][5] |= (1<<0);
-//	*registers[PID][5] |= (0x0F<<2);
+	*registers[PID][5] |= (1<<0);
+	*registers[PID][5] |= (0x0F<<2);
 	*registers[PID][0] |= (1<<0); //enable stream 0
 }
 
